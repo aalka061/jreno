@@ -1,0 +1,98 @@
+<div class="container-fluid py-6 px-5">
+
+  <div class="text-center mx-auto mb-5" style="max-width: 600px">
+    <h1 class="display-5 text-uppercase mb-4">
+      <%= @work.title %>
+    </h1>
+    <h5 class=" mb-4">
+      <%= @work.description %>
+    </h5>
+  </div>
+
+  <div class="row g-5 portfolio-container " style="position: relative; height: 1129.3px;">
+
+    <% @images.each do |image| %>
+    <div class="col-xl-4 col-lg-6 col-md-6 portfolio-item first">
+      <div class="position-relative portfolio-box">
+        <img class="img-fluid w-100" src="<%= image %>" alt="" />
+        <a class="portfolio-btn" href="<%= image %>"  data-lightbox="portfolio">
+          <i class="bi bi-plus text-white"></i>
+        </a>
+      </div>
+    </div>
+    <% end %>
+
+  </div>
+</div>
+
+<style media="screen">
+  .portfolio-title {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 120px;
+    padding: 0 30px;
+    right: 30px;
+    left: 30px;
+    bottom: -60px;
+    background: #FFFFFF;
+    z-index: 3;
+  }
+  .position-relative {
+    position: relative !important;
+  }
+
+  .portfolio-item:hover .portfolio-btn {
+    opacity: 1;
+  }
+
+  .portfolio-box::before,
+  .portfolio-box::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    transition: .5s;
+    z-index: 1;
+    background: rgba(4, 15, 40, .7);
+  }
+
+  .portfolio-box::before {
+    left: 0;
+  }
+
+  .portfolio-box::after {
+    right: 0;
+  }
+
+  .portfolio-item:hover .portfolio-box::before {
+    left: 0;
+    width: 50%;
+  }
+
+  .portfolio-item:hover .portfolio-box::after {
+    right: 0;
+    width: 50%;
+  }
+  .portfolio-btn {
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    left: 50%;
+    margin-top: -60px;
+    margin-left: -60px;
+    font-size: 120px;
+    line-height: 0;
+    transition: .1s;
+    transition-delay: .3s;
+    z-index: 2;
+    opacity: 0;
+  }
+
+</style>
+
+<script type="text/javascript">
+
+</script>

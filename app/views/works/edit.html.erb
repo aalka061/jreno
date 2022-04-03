@@ -1,0 +1,11 @@
+<h1>Editing Work</h1>
+<div class="container">
+
+  <%= render 'form', work: @work %>
+
+  <div class="d-flex justify-content-start">
+    <%= link_to 'Show', @work, class: "btn btn-secondary " %> 
+    <%= link_to 'Back', works_path, class: "btn btn-secondary " %>
+  </div>
+
+</div>

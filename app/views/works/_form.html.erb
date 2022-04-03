@@ -1,0 +1,63 @@
+<%= form_with(model: work) do |form| %>
+<% if work.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(work.errors.count, "error") %> prohibited this work from being saved:</h2>
+
+  <ul>
+    <% work.errors.each do |error| %>
+    <li><%= error.full_message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+<div class="mb-3 row">
+  <%= form.label :title, class: "form-label" %>
+  <%= form.text_field :title, class: "form-control" %>
+</div>
+
+<div class="mb-3 row">
+  <%= form.label :description, class: "form-label" %>
+  <%= form.text_area :description, class: "form-control" %>
+</div>
+
+<div class="mb-3 row">
+  <%= form.label :main_image_url, "Main Image URL (https//)", class: "form-label" %>
+  <%= form.text_field :main_image_url, class: "form-control" %>
+</div>
+
+<div class="mb-3 row">
+  <%= form.label :image_1_url, "Image 1 URL", class: "form-label" %>
+  <%= form.text_field :image_1_url, class: "form-control" %>
+</div>
+<div class="mb-3 row">
+  <%= form.label :image_2_url, "Image 2 URL", class: "form-label"  %>
+  <%= form.text_field :image_2_url, class: "form-control" %>
+</div>
+
+<div class="mb-3 row">
+  <%= form.label :image_3_url, "Image 3 URL", class: "form-label" %>
+  <%= form.text_field :image_3_url, class: "form-control" %>
+</div>
+
+<div class="mb-3 row">
+  <%= form.label :image_4_url, "Image 4 URL", class: "form-label" %>
+  <%= form.text_field :image_4_url, class: "form-control" %>
+</div>
+
+<div class="mb-3 row">
+  <%= form.label :image_5_url, "Image 5 URL", class: "form-label"  %>
+  <%= form.text_field :image_5_url, class: "form-control"  %>
+</div>
+
+
+<div class="">
+  <%= form.hidden_field :service_id, value: params[:service_id] %>
+</div>
+
+<div class="actions d-flex flex-row-reverse ">
+  <%= form.submit "Save", class: "btn btn-primary" %>
+</div>
+
+
+
+<% end %>

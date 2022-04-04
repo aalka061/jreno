@@ -14,19 +14,15 @@
       </div>
       <div class="col-lg-3 col-md-6">
         <h3 class="text-light mb-4">Services</h3>
-        <a class="btn btn-link" href="">Architecture</a>
-        <a class="btn btn-link" href="">3D Animation</a>
-        <a class="btn btn-link" href="">House Planning</a>
-        <a class="btn btn-link" href="">Interior Design</a>
-        <a class="btn btn-link" href="">Construction</a>
+        <% @services.each do |s| %>
+        <a class="btn btn-link" href=" <%= service_works_path(s)%>"> <%= s.title %></a>
+        <% end %>
+
       </div>
       <div class="col-lg-3 col-md-6">
         <h3 class="text-light mb-4">Quick Links</h3>
-        <a class="btn btn-link" href="">About Us</a>
-        <a class="btn btn-link" href="">Contact Us</a>
-        <a class="btn btn-link" href="">Our Services</a>
-        <a class="btn btn-link" href="">Terms &amp; Condition</a>
-        <a class="btn btn-link" href="">Support</a>
+        <a class="btn btn-link" href="#contact_form">Contact Us</a>
+        <a class="btn btn-link" href="<%= services_path %>">Our Services</a>
       </div>
 
     </div>

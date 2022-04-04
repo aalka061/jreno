@@ -1,0 +1,10 @@
+<% unless @error.present? %>
+Swal.fire({
+  title: 'Success',
+  text: 'Message Sent',
+  icon: 'success',
+  confirmButtonText: 'Ok'
+}).then(function() {
+  Turbolinks.visit("#")
+})
+<% end %>

@@ -1,9 +1,15 @@
 class WorksController < ApplicationController
   before_action :set_work, only: %i[ show edit update destroy ]
+  before_action :set_services
 
   # GET /works or /works.json
   def index
     @works = Work.all
+    if params[:service_id].present?
+      @service = Service.find params[:service_id]
+      @works = @service.works
+    end
+
   end
 
   # GET /works/1 or /works/1.json

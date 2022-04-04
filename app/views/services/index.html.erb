@@ -1,31 +1,14 @@
-<p id="notice"><%= notice %></p>
+<div class="mt-3">
+  <%= link_to 'New Service', new_service_path, class: "btn btn-primary float-md-end" %>
+</div>
 
-<h1>Services</h1>
+<div class="text-center mx-auto mb-5" style="max-width: 600px">
+  <h1 class="display-5 text-uppercase mb-4">
+    Services
+  </h1>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Main image url</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @services.each do |service| %>
-      <tr>
-        <td><%= service.title %></td>
-        <td><%= service.main_image_url %></td>
-        <td><%= service.description %></td>
-        <td><%= link_to 'Show', service %></td>
-        <td><%= link_to 'Edit', edit_service_path(service) %></td>
-        <td><%= link_to 'Destroy', service, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Service', new_service_path %>
+<div class="">
+  <%= render "services/partials/list" %>
+</div>

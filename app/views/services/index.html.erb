@@ -1,16 +1,20 @@
-<% if current_user %>
-<div class="mt-3">
-  <%= link_to 'New Service', new_service_path, class: "btn btn-primary float-md-end" %>
-</div>
-<% end %>
+<div class="container-fluid py-6 px-5">
+  <br>
+  <% if current_user %>
+  <div class="mt-3">
+    <%= link_to 'New Service', new_service_path, class: "btn btn-primary float-md-end" %>
+  </div>
+  <% end %>
 
-<div class="text-center mx-auto mb-5" style="max-width: 600px">
-  <h1 class="display-5 text-uppercase mb-4">
-    Services
-  </h1>
-</div>
+  <div class="text-center mx-auto mb-5" style="max-width: 600px">
+    <h1 class="display-5 text-uppercase mb-4">
+      Our Services
+    </h1>
+  </div>
 
 
-<div class="">
-  <%= render "services/partials/list" %>
+  <div class="">
+    <%= render "services/partials/list" %>
+  </div>
+
 </div>

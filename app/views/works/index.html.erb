@@ -1,14 +1,16 @@
 <!-- Portfolio Start -->
 <div class="container-fluid py-6 px-5">
   <br>
-  <% if @service && current_user %>
+  <% if current_user %>
+  <% if @service %>
   <div class="mt-3">
-    <%= link_to 'New Work', new_service_work_path, class: 'btn btn-primary float-md-end' %>
+    <%= link_to 'New Work', new_service_work_path, class: 'btn btn-secondary float-md-end' %>
   </div>
   <% else %>
   <div class="mt-3">
-    <%= link_to 'New Work', new_work_path, class: 'btn btn-primary float-md-end' %>
+    <%= link_to 'New Work', new_work_path, class: 'btn btn-secondary float-md-end' %>
   </div>
+  <% end %>
   <% end %>
   <div class="text-center mx-auto mb-5" style="max-width: 600px">
     <h1 class="display-5 text-uppercase mb-4">
@@ -28,80 +30,75 @@
     <div class="col-xl-4 col-lg-6 col-md-6 portfolio-item first">
       <div class="position-relative portfolio-box">
         <img class="img-fluid w-100" style="height: 400px" src="<%= work.main_image_url %>" alt="" />
-        <a class="portfolio-title shadow-sm" href=" <%= service_work_path(id: work.id, service_id: work.service_id) %>">
+
+        <a class="portfolio-title" href=" <%= service_work_path(id: work.id, service_id: work.service_id) %>">
           <p class="h4 text-uppercase"> <%= work.title %></p>
-
+          <%if current_user %>
+          <%= link_to "<i class='bi bi-pencil-square '></i>".html_safe, edit_work_path(work), class: "btn btn-outline fs-4" %>
+          <%= link_to "<i class='bi  bi-trash-fill'></i>".html_safe, work_path(work), method: :delete,
+          data: {:confirm => 'Are you sure?'}, class: "btn btn-outline fs-4" %>
+          <% end %>
           <a class="portfolio-btn" href="<%= service_work_path(id: work.id, service_id: work.service_id) %>"> <i class="bi bi-plus text-white"></i></a>
-        </div>
+        </a>
       </div>
-      <% end %>
-
     </div>
+    <% end %>
+
   </div>
+</div>
 
-  <style media="screen">
-    .portfolio-title {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      height: 80px;
-      padding: 0 30px;
-      right: 30px;
-      left: 30px;
-      bottom: -60px;
-      background: #FFFFFF;
-      z-index: 3;
-    }
-    .position-relative {
-      position: relative !important;
-    }
+<style media="screen">
+  .portfolio-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 80px;
+    padding: 0 30px;
+    right: 30px;
+    left: 30px;
+    bottom: -60px;
+    background: #FFFFFF;
+    z-index: 3;
+  }
+  .position-relative {
+    position: relative !important;
+  }
 
-    .portfolio-item:hover .portfolio-btn {
-      opacity: 1;
-    }
+  .portfolio-item:hover .portfolio-btn {
+    opacity: 1;
+  }
 
-    .portfolio-box::before,
-    .portfolio-box::after {
-      position: absolute;
-      content: "";
-      width: 0;
-      height: 100%;
-      top: 0;
-      transition: .5s;
-      z-index: 1;
-      background: rgba(4, 15, 40, .7);
-    }
 
-    .portfolio-box::before {
-      left: 0;
-    }
+  .portfolio-box::before {
+    left: 0;
+  }
 
-    .portfolio-box::after {
-      right: 0;
-    }
+  .portfolio-box::after {
+    right: 0;
+  }
 
-    .portfolio-item:hover .portfolio-box::before {
-      left: 0;
-      width: 50%;
-    }
+  .portfolio-item:hover .portfolio-box::before {
+    left: 0;
+    width: 50%;
+  }
 
-    .portfolio-item:hover .portfolio-box::after {
-      right: 0;
-      width: 50%;
-    }
-    .portfolio-btn {
-      position: absolute;
-      display: inline-block;
-      top: 50%;
-      left: 50%;
-      margin-top: -60px;
-      margin-left: -60px;
-      font-size: 120px;
-      line-height: 0;
-      transition: .1s;
-      transition-delay: .3s;
-      z-index: 2;
-      opacity: 0;
-    }
+  .portfolio-item:hover .portfolio-box::after {
+    right: 0;
+    width: 50%;
+  }
+  .portfolio-btn {
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    left: 50%;
+    margin-top: -60px;
+    margin-left: -60px;
+    font-size: 120px;
+    line-height: 0;
+    transition: .1s;
+    transition-delay: .3s;
+    z-index: 2;
+    opacity: 0;
+  }
 
-  </style>
+</style>

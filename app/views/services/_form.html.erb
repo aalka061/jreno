@@ -11,22 +11,22 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+  <div class="mb-3 row">
+    <%= form.label :title, class: "form-label" %>
+    <%= form.text_field :title%>
   </div>
 
-  <div class="field">
+  <div class="mb-3 row">
     <%= form.label :main_image_url %>
     <%= form.text_field :main_image_url %>
   </div>
 
-  <div class="field">
+  <div class="mb-3 row">
     <%= form.label :description %>
     <%= form.text_area :description %>
   </div>
 
-  <div class="actions">
+  <div class="actions d-flex flex-row-reverse">
     <%= form.submit %>
   </div>
 <% end %>

@@ -1,6 +1,6 @@
 class Service < ApplicationRecord
 
-  has_many :works
+  has_many :works, dependent: :destroy
 
   def self.create_default_services
     services = [

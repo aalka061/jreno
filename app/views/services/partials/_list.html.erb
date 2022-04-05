@@ -4,9 +4,11 @@
     <div class="service-item bg-white d-flex flex-column align-items-center text-center">
       <img class="mb-3 img-fluid" src="<%=service.main_image_url %>" alt="" />
       <div style="text-align: center;">
+        <% if current_user %>
         <%= link_to "<i class='bi bi-pencil-square '></i>".html_safe, edit_service_path(service), class: "btn btn-outline fs-4" %>
         <%= link_to "<i class='bi  bi-trash-fill'></i>".html_safe, service_path(service), method: :delete,
         data: {:confirm => 'Are you sure?'}, class: "btn btn-outline fs-4" %>
+        <% end %>
       </div>
 
       <div class="px-4 pb-4">

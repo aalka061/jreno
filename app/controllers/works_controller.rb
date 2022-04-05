@@ -1,6 +1,6 @@
 class WorksController < ApplicationController
   before_action :set_work, only: %i[ show edit update destroy ]
-  before_action :set_services
+  # before_action :set_services
 
   # GET /works or /works.json
   def index

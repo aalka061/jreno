@@ -4,4 +4,10 @@ class ApplicationController < ActionController::Base
     @services = Service.all
 
   end
+
+  def set_footer
+    @show_footer = true
+    @services = Service.all
+
+  end
 end

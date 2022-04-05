@@ -11,17 +11,17 @@
 </div>
 <% end %>
 <div class="mb-3 row">
-  <%= form.label :title, class: "form-label" %>
+  <%= form.label "title *", class: "form-label" %>
   <%= form.text_field :title, class: "form-control" %>
 </div>
 
 <div class="mb-3 row">
-  <%= form.label :description, class: "form-label" %>
+  <%= form.label "description *", class: "form-label" %>
   <%= form.text_area :description, class: "form-control" %>
 </div>
 
 <div class="mb-3 row">
-  <%= form.label :main_image_url, "Main Image URL (https//)", class: "form-label" %>
+  <%= form.label "main image url *", "Main Image URL (https//)", class: "form-label" %>
   <%= form.text_field :main_image_url, class: "form-control" %>
 </div>
 
@@ -49,10 +49,15 @@
   <%= form.text_field :image_5_url, class: "form-control"  %>
 </div>
 
-
+<%if params[:service_id] %>
 <div class="">
   <%= form.hidden_field :service_id, value: params[:service_id] %>
 </div>
+<% else %>
+<div class="mb-3 row">
+  <%= form.collection_select :service_id, Service.all, :id, :title, {}, class: "form-control" %>
+</div>
+<% end %>
 
 <div class="actions d-flex flex-row-reverse ">
   <%= form.submit "Save", class: "btn btn-primary" %>

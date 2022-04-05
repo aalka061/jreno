@@ -11,18 +11,23 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
 
       <div class="navbar-nav  ms-auto py-0">
-        <a href="<%= root_path %>" class="nav-item nav-link active">Home</a>
+        <a href="<%= root_path %>" class="nav-item nav-link  <%= 'active' if current_page?(root_path) %> ">Home</a>
         <!-- <a href="#" class="nav-item nav-link">About</a> -->
-        <a href=" <%= services_path %>" class="nav-item nav-link">Services</a>
-        <a href=" <%= works_path %>" class="nav-item nav-link">Work</a>
+        <a href=" <%= services_path %>" class="nav-item nav-link <%= 'active' if current_page?(services_path) %>">Services</a>
+        <a href=" <%= works_path %>" class="nav-item nav-link <%= 'active' if current_page?(works_path) %>">Work</a>
         <% if controller.action_name == "homepage"%>
-        <a href="#contact_form" class="nav-item nav-link">Contact</a>
+        <a href="#contact_form" class="nav-item nav-link ">Contact</a>
         <% else %>
-        <a href="<%= pages_contactpage_path %>" class="nav-item nav-link">Contact</a>
+        <a href="<%= pages_contactpage_path %>" class="nav-item nav-link <%= 'active' if current_page?(pages_contactpage_path) %>">Contact</a>
 
         <% end %>
         <p class="nav-item nav-link">+1 (438) 488-4100</p>
 
+        <% if current_user %>
+        <%= link_to "logout",  destroy_user_session_path, method: :delete, class: "nav-item nav-link #{'active' if current_page?(destroy_user_session_path) }" %>
+        <% else %>
+        <%= link_to "login",  new_user_session_path, class: "nav-item nav-link #{'active' if current_page?(new_user_session_path) }" %>
+        <% end %>
       </div>
 
 
@@ -32,23 +37,12 @@
 </div>
 <style media="screen">
 
-  .navbar {
-    background: none; !important
-  }
-  navbar .navbar-nav .nav-link {
-    margin-right: 30px;
-    padding: 30px 0;
-    color: var(--dark);
-    font-weight: 500;
-    text-transform: uppercase;
-    outline: none;
-  }
+
+
   .nav-link{
     text-transform: uppercase
   }
 
-  .bg-nav {
-    background-color: #e8ebe1 !important;
-  }
+
 
 </style>

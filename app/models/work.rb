@@ -2,6 +2,8 @@ class Work < ApplicationRecord
  belongs_to :service
 
  validates_presence_of :main_image_url
+ validates_presence_of :title
+ validates_presence_of :description
 
  def images
    images = []

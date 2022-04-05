@@ -1,9 +1,13 @@
 <!-- Portfolio Start -->
 <div class="container-fluid py-6 px-5">
   <br>
-  <% if @service %>
+  <% if @service && current_user %>
   <div class="mt-3">
     <%= link_to 'New Work', new_service_work_path, class: 'btn btn-primary float-md-end' %>
+  </div>
+  <% else %>
+  <div class="mt-3">
+    <%= link_to 'New Work', new_work_path, class: 'btn btn-primary float-md-end' %>
   </div>
   <% end %>
   <div class="text-center mx-auto mb-5" style="max-width: 600px">
@@ -23,7 +27,7 @@
     <% @works.each do |work| %>
     <div class="col-xl-4 col-lg-6 col-md-6 portfolio-item first">
       <div class="position-relative portfolio-box">
-        <img class="img-fluid w-100" src="<%= work.main_image_url %>" alt="" />
+        <img class="img-fluid w-100" style="height: 400px" src="<%= work.main_image_url %>" alt="" />
         <a class="portfolio-title shadow-sm" href=" <%= service_work_path(id: work.id, service_id: work.service_id) %>">
           <p class="h4 text-uppercase"> <%= work.title %></p>
 
@@ -37,11 +41,10 @@
 
   <style media="screen">
     .portfolio-title {
-      position: absolute;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      height: 120px;
+      height: 80px;
       padding: 0 30px;
       right: 30px;
       left: 30px;

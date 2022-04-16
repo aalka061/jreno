@@ -31,7 +31,7 @@
       <div class="position-relative portfolio-box">
         <img class="img-fluid w-100" style="height: 400px" src="<%= work.main_image_url %>" alt="" />
 
-        <a class="portfolio-title" href=" <%= service_work_path(id: work.id, service_id: work.service_id) %>">
+        <a class="portfolio-title text-center" href=" <%= service_work_path(id: work.id, service_id: work.service_id) %>">
           <p class="h4 text-uppercase"> <%= work.title %></p>
           <%if current_user %>
           <%= link_to "<i class='bi bi-pencil-square '></i>".html_safe, edit_work_path(work), class: "btn btn-outline fs-4" %>
@@ -59,6 +59,7 @@
     bottom: -60px;
     background: #FFFFFF;
     z-index: 3;
+      text-decoration: none;
   }
   .position-relative {
     position: relative !important;

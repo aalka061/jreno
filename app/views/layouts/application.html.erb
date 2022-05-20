@@ -37,6 +37,7 @@
 </head>
 
 <body>
+
   <%= render 'shared/navbar' %>
   <div class="container d-flex justify-content-center ">
     <% flash.each do |key, message| %>
@@ -46,6 +47,10 @@
   <div class="container-fluid pl-1">
     <%= render_breadcrumbs %>
   </div>
+  <div class="">
+
+  </div>
+
   <%= yield %>
   <%= render 'shared/footer'  if @show_footer %>
 

@@ -1,5 +1,7 @@
 class WorksController < ApplicationController
   before_action :set_work, only: %i[ show edit update destroy ]
+  before_action :set_footer
+
   # before_action :set_services
 
   # GET /works or /works.json
@@ -15,7 +17,7 @@ class WorksController < ApplicationController
   # GET /works/1 or /works/1.json
   def show
     @images = @work.images
-    add_breadcrumb "Back to #{@work.service.title} projects ", service_works_path(@work.service)
+    # add_breadcrumb "Back to #{@work.service.title} projects ", service_works_path(@work.service)
   end
 
   # GET /works/new

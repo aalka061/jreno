@@ -13,26 +13,29 @@
   <% end %>
   <% end %>
   <div class="text-center mx-auto mb-5" style="max-width: 600px">
-    <h1 class="display-5 text-uppercase mb-4">
+    <h1 class="display-4 mb-4">
       <%if @service  %>
       <%= @service.title %>
       <% else %>
       Our Work
       <% end %>
     </h1>
+    <p>
+      You’re invited to browse a selection of recently completed projects below.
+    </p>
     <h5 class=" mb-4">
       <%= @service.description  if @service %>
     </h5>
   </div>
 
-  <div class="row g-5 portfolio-container " style="position: relative; height: 1129.3px;">
+  <div class="row portfolio-container " style="position: relative;">
     <% @works.each do |work| %>
     <div class="col-xl-4 col-lg-6 col-md-6 portfolio-item first">
       <div class="position-relative portfolio-box">
         <img class="img-fluid w-100" style="height: 400px" src="<%= work.main_image_url %>" alt="" />
 
         <a class="portfolio-title text-center" href=" <%= service_work_path(id: work.id, service_id: work.service_id) %>">
-          <p class="h4 text-uppercase"> <%= work.title %></p>
+          <p class="h4 "> <%= work.title %></p>
           <%if current_user %>
           <%= link_to "<i class='bi bi-pencil-square '></i>".html_safe, edit_work_path(work), class: "btn btn-outline fs-4" %>
           <%= link_to "<i class='bi  bi-trash-fill'></i>".html_safe, work_path(work), method: :delete,

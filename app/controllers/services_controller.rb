@@ -1,7 +1,7 @@
 class ServicesController < ApplicationController
   before_action :set_service, only: %i[ show edit update destroy ]
   # before_action :authenticate_user!
-  before_action :set_footer, only: %i[index new edit create update]
+  before_action :set_footer
   # GET /services or /services.json
   def index
     @services = Service.all

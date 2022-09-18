@@ -5,7 +5,7 @@ ruby '2.6.6'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.5'
-gem "pg"
+gem "pg", '~> 1.4.3'
 
 # Use Puma as the app server
 gem 'puma', '~> 5.0'

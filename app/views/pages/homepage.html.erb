@@ -2,35 +2,27 @@
   <header>
     <div class=" container-fluid ">
       <div class="carousel-cap justify-content-center col-6">
-        <h1 class="display-2 text-white">
-          Exceptional Home Remodeling & Renovations
+        <h1 class="display-2">
+          EXCEPTIONAL HOME REMODELING & Renovations
         </h1>
         <a class="btn btn-light py-md-3 px-md-5 mt-2 pb-2" href="#contact_form">Get a Free Estimate</a>
       </div>
-    </div>
+    </div>[]
   </header>
-  <%#
-  <aside class="figures mb-3">
-  <div class="container">
-  <div class="row justify-content-center stats">
-  <div class="col-12 col-lg-10 figure centered pb-3">
-  <h2>JRÉNO's team is professional at residential renovation. We have enough expertise to provide high quality services, competitive prices, and excellent customer service</h2>
-</div>
-</div>
-</div>
-</aside> %>
 
 <div style="margin-top: 60px">
   <div class="row  align-items-center">
     <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeIn;">
       <div class="about-img">
-        <img  class="img-fluid about-img" src= "<%= asset_path('kitchen-1336160.jpg') %>" alt="">
+        <img  class="img-fluid about-img" src= "<%= asset_path('home_page_2.jpg') %>" alt="">
       </div>
     </div>
     <div class="col-lg-6" >
       <div style="margin-left: 10%; padding-right: 28%;">
         <!-- <h4 class="section-title">About Us</h4> -->
-        <h1 class="display-5 mb-4">The Leading Montreal Remodeling Company</h1>
+        <h1 class="display-5 mb-4">
+          Looking forward to being the premium General Contractor in the Greater Montreal area
+        </h1>
 
         <p>
           Wether you are a person OR company we have the power to carry out your most ambitious projects. JRÉNO's Team take initial planning in charge, set timelines for your project, and handle cost management whilst ensuring compliance with construction regulations at all times.
@@ -44,11 +36,11 @@
 
 <div style="margin-top: 80px; margin-bottom: 130px">
   <div class="row ">
-    <h1 class="display-5 d-flex justify-content-center">Why Choose Us!</h1>
+    <h1 class="display-5 d-flex justify-content-center mb-4">Why Choose Us!</h1>
   </div>
   <div class="row text-center " style="padding-top: 80px">
     <div class="col margin-why-choose" >
-      <h4 style="color: #a26028; font-weight: bold; margin-bottom: 20px" >Competitive Pricing</h4>
+      <h4 style="color: #a26028; font-weight: bold; margin-bottom: 20px" >AffordableCost</h4>
       <p> We provide quality work for your hard earned cash</p>
     </div>
     <div class="col margin-why-choose" >
@@ -56,8 +48,13 @@
       <p>  When you contact us, we’ll call you within 24 hours to schedule your appointment</p>
     </div>
     <div class="col margin-why-choose">
-      <h4 style="color: #a26028; font-weight: bold; margin-bottom: 20px" >Professional Workmanship</h4>
-      <p>  From start to finish a professional renovator will help you put it all together a.</p>
+      <h4 style="color: #a26028; font-weight: bold; margin-bottom: 20px" >
+        Post-delivery service
+      </h4>
+      <p>
+        Reliable, on-time construction material delivery
+
+      </p>
     </div>
     <div class="col margin-why-choose">
       <h4 style="color: #a26028; font-weight: bold; margin-bottom: 20px" >Licensed & Insured</h4>
@@ -66,11 +63,12 @@
   </div>
 </div>
 <div style="margin-top: 80px">
-  <div class="row ">
+  <div class="row pb-4 mb-3 ">
     <h1 class="display-5 d-flex justify-content-center">Our Services Include</h1>
   </div>
+  <br><br>
   <div class="row text-center ">
-    <%= render "services/partials/list" %>
+    <%= render "services/partials/list_services" %>
   </div>
 </div>
 
@@ -179,10 +177,10 @@
 
   .carousel-cap {
     position: absolute;
-    bottom: 3.25rem;
     left: 8%;
     padding-bottom: 1.25rem;
     color: #fff;
+    text-transform: uppercase
   }
 
   .bg-white {

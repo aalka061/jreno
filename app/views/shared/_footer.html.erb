@@ -1,97 +1,25 @@
-<div id="footer" class="container-fluid bg-footer text-body footer mt-5 pt-5 px-0" style="padding-bottom: 0">
-  <div class="container py-5">
-    <div class="row g-5">
-      <div class="col-lg-3 col-md-6">
-        <h3 class="text-light mb-4">Address</h3>
-        <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>1050 Av. Amesbury, Montréal, QC H3H 2S5</p>
-        <p class="mb-2"><i class="fa fa-phone-alt text-primary me-3"></i>+1 (438) 488-4100</p>
-        <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>info@jreno.com</p>
-        <div class="d-flex pt-2">
-          <!-- <a class="btn btn-square btn-outline-body me-1" href=""><i class="fab fa-twitter"></i></a> -->
-          <a class="btn btn-square btn-outline-body me-1" href="https://www.facebook.com/jreno.ca/"><i class="fab fa-facebook-f"></i></a>
-          <a class="btn btn-square btn-outline-body me-0" href="https://www.linkedin.com/company/jreno"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6">
-        <h3 class="text-light mb-4">Services</h3>
-        <% @services.each do |s| %>
-        <a class="btn btn-link" href=" <%= service_works_path(s)%>"> <%= s.title %></a>
-        <% end %>
-
-      </div>
-      <div class="col-lg-3 col-md-6">
-        <h3 class="text-light mb-4">Quick Links</h3>
-        <a class="btn btn-link" href="#contact_form">Contact Us</a>
-        <a class="btn btn-link" href="<%= services_path %>">Our Services</a>
-      </div>
-
-    </div>
-  </div>
+<div id="footer" class="container-fluid text-body footer mt-5 pt-1 px-0" style="padding-bottom: 0">
   <div class="container-fluid copyright">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-          © <a href="#">JRÉNO</a>, All Right Reserved.
+      <div class="row pb-5 text-center">
+        <div class="col-md-6 p-poppins-200">
+          © <%= DateTime.now.year %> by JRENO INC.
         </div>
+        <div class="col-md-6 ">
+            <a class="btn btn-square btn-outline-body" href="https://www.facebook.com/jreno.ca/"><i class="fab fa-facebook-f"></i></a>
+            <a class="btn btn-square btn-outline-body" href="https://www.linkedin.com/company/jreno"><i class="fab fa-instagram"></i></a>
+            <a class="btn btn-square btn-outline-body" href="https://www.linkedin.com/company/jreno"><i class="fab fa-youtube"></i></a>
 
+            <a class="btn btn-square btn-outline-body" href="https://www.linkedin.com/company/jreno"><i class="fab fa-linkedin-in"></i></a>
+        </div>
       </div>
-    </div>
   </div>
 </div>
 
 <style media="screen">
-  .text-body {
-    color: #777 !important;
-  }
-  .footer .btn.btn-link {
-    display: block;
-    margin-bottom: 5px;
-    padding: 0;
-    text-align: left;
-    color: #777777;
-    font-weight: normal;
-    text-transform: capitalize;
-    transition: .3s;
-    text-decoration: none;
-  }
-
-  .footer .btn.btn-link::before {
-
-    position: relative;
-    content: "\f105";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    color: var(--primary);
-    margin-right: 10px;
-
-  }
-
-  .bg-footer {
-    background-color: #1b1c1b !important;
-  }
 
   .btn-outline-body {
     color: #B98F67;
     border-color: #777777;
   }
 
-  .btn-square {
-    width: 38px;
-    height: 38px;
-  }
-
-  .btn-square, .btn-sm-square, .btn-lg-square {
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: normal;
-  }
-  .text-primary {
-    color: #B78D65 !important;
-  }
-
-  a, u {
-    text-decoration: none;
-  }
 </style>

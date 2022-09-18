@@ -12,9 +12,9 @@
 
 <div style="margin-top: 60px">
   <div class="row  align-items-center">
-    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeIn;">
+    <div class="col-lg-6" >
       <div class="about-img">
-        <img  class="img-fluid about-img" src= "<%= asset_path('home_page_2.jpg') %>" alt="">
+        <img  class="img-fluid" src= "<%= asset_path('home_page_2.jpg') %>" alt="">
       </div>
     </div>
     <div class="col-lg-6" >
@@ -77,20 +77,22 @@
 <!-- Services End -->
 <br><br><br><br><br>
 <!-- Testimonial End -->
-<div class="container mt-5 mb-5">
+<div class="container-fluid mt-5 mb-5">
   <%= render "pages/home_page/testimonial" %>
 </div>
-<div class="container" id="contact_form">
-  <div  class="row">
-    <%= render "pages/partials/contact" %>
-  </div>
-</div>
+
 <br><br>
 </div>
-
+<div class="c-black" id="contact_form">
+    <%= render "pages/partials/contact_black" %>
+</div>
 
 
 <style media="screen">
+  .c-black{
+    background-color: #1b1c1b !important;
+  }
+
   header {
     min-height: 900px;
     width: 100%;
@@ -147,6 +149,7 @@
     position: relative;
     height: 100%;
     min-height: 300px;
+
   }
   .about-img-2{
     position: relative;
@@ -246,7 +249,11 @@
     margin-left: 100px;
     margin-right:100px;
   }
-
+  img  {
+    background-image: url("https://www.w3schools.com/cssref/img_tree.gif");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
 </style>
 
 <script type="text/javascript">

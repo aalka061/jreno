@@ -9,4 +9,8 @@ class PagesController < ApplicationController
   def contactpage
     @contact = Contact.new
   end
+
+  def construction
+    @contact = Contact.new
+  end
 end

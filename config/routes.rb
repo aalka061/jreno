@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   end
   get 'pages/homepage'
   get 'pages/contactpage'
+  get 'pages/construction'
   root to: 'pages#homepage'
   resources :contacts, only: [:new, :create]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

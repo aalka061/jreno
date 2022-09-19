@@ -1,0 +1,27 @@
+<div class="col-lg-5 card card-body ">
+  <h5 class="card-title text-center pb-4" style="color: black;">Contact us!</h5>
+
+  <%= form_for @contact, remote: true do |f| %>
+
+  <div class="row g-3">
+    <div class="col-12 col-sm-12">
+      <%= f.text_field  :name, required: true, class: "form-control", placeholder: "Your Name", style: "height: 55px;" %>
+    </div>
+
+    <div class="col-12 col-sm-12">
+      <%= f.text_field  :phone_number, class: "form-control", placeholder: "Your Mobile", style: "height: 55px;" %>
+    </div>
+
+    <div class="col-12 col-sm-12">
+      <%= f.text_field :email, required: true, class: "contact-form-text-area form-control", placeholder: "Your Email", style: "height: 55px;" %>
+    </div>
+    <div class="col-12">
+      <%= f.text_area :message, rows: 8, cols: 60, required: true, class: "contact-form-text-area form-control",
+      placeholder: "Please write briefly about your project and prefered date and time to be contacted", rows: 8%><br>
+    </div>
+    <div class="col-12">
+      <%= f.submit 'Submit', class: 'btn btn-dark btn-sm w-100 py-2' %>
+    </div>
+  </div>
+  <% end %>
+</div>

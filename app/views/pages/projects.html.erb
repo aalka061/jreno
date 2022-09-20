@@ -1,0 +1,29 @@
+<!--Grid System Start-->
+<div class="row text-center" style="padding-top: 100px;">
+  <h1 style="font-size: 65px" class="p-bold">Our Works</h1>
+  <p>You’re invited to browse a selection of recently completed projects below.</p>
+</div>
+<br><br>
+<div class="row" style="padding-left: 70px; padding-right: 70px">
+  <%= render 'pages/partials/project', image_name: 'projects_buildings.jpg', title: "Buildings" %>
+  <%= render 'pages/partials/project', image_name: 'projects_kitchens.jpeg', title: "Kitchens" %>
+  <%= render 'pages/partials/project', image_name: 'projects_bathroom.jpg', title: 'Bathrooms' %>
+  <%= render 'pages/partials/project', image_name: 'projects_basement.jpg', title: "Basement" %>
+  <%= render 'pages/partials/project', image_name: 'projects_interior.jpg', title: "Interiors" %>
+  <%= render 'pages/partials/project', image_name: 'projects_exterior.png', title: "Exteriors" %>
+
+
+</div>
+
+<!--Grid System End -->
+
+<style media="screen">
+  .img-thumbnail {
+    margin-bottom: 35px;
+  }
+
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+</style>

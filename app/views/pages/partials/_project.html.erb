@@ -1,0 +1,51 @@
+<div class="col-lg-4 col-md-6">
+  <div class="fullwrap">
+    <a href="#">
+      <img src="<%= asset_path(image_name) %>" class="img-thumbnail img-cont">
+      <div  class="fullcap p-poppins">
+        <%= title %><br>
+      </div>
+    </a>
+  </div>
+</div>
+
+<style media="screen">
+
+  /* (A) WRAPPER */
+  .fullwrap {
+    position: relative; /* required for (c2) */
+    max-width: 500px; /* optional */
+  }
+
+  /* (B) RESPONSIVE IMAGE */
+  .fullwrap img { width: 100%; }
+
+  /* (C) CAPTION */
+  .fullcap {
+    /* (C1) DIMENSIONS */
+    box-sizing: border-box;
+    width: 100%;
+    height: 90%;
+
+    /* (C2) POSITION */
+    position: absolute;
+    top: 0; left: 0;
+    text-align: center;
+    padding-top: 30%;
+
+    /* (C3) COLORS */
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  /* (D) SHOW/HIDE */
+  .fullcap {
+    visibility: none; opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .fullwrap:hover .fullcap {
+    visibility: visible; opacity: 1;
+  }
+</style>

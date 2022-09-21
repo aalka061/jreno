@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get 'pages/maintenance'
   get 'pages/services'
   get 'pages/projects'
+  get 'pages/dashboard'
   root to: 'pages#homepage'
   resources :contacts, only: [:new, :create]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

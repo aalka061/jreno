@@ -18,6 +18,8 @@ class PicturesController < ApplicationController
 
   # GET /pictures/1/edit
   def edit
+    @type = @picture.project_type
+
   end
 
   # POST /pictures or /pictures.json

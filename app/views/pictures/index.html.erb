@@ -2,32 +2,63 @@
 
 <h1>Pictures</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Url</th>
-      <th>Project type</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
+
+<div class="container">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
     <% @pictures.each do |picture| %>
-      <tr>
-        <td><%= picture.title %></td>
-        <td><%= picture.description %></td>
-        <td><%= picture.url %></td>
-        <td><%= picture.project_type %></td>
-        <td><%= link_to 'Show', picture %></td>
-        <td><%= link_to 'Edit', edit_picture_path(picture) %></td>
-        <td><%= link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+    <div class="col">
+      <div class="card">
+        <div class="card-image-wrapper">
+          <img src="<%= picture.main_image.attachment && picture.main_image.attachment.url %>" class="card-img-top img-fluid" alt=" <%= picture.title %>">
+        </div>
+        <div class="card-body">
+          <%= generate_badge(picture.project_type) %>
+          <h5 class="card-title"> <%= picture.title && picture.title.humanize  %></h5>
+          <p class="card-text"> <%= picture.description && picture.description.truncate(150) %></p>
+          <ul class="list-inline m-0 text-center" style ="bottom: 1px; position: absolute" >
+            <li class="list-inline-item p-2">
+              <button class="btn btn-primary btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="View"><i class="fa fa-eye"></i></button>
+            </li>
+            <li class="list-inline-item p-2">
+              <%= link_to "<i class='fa fa-edit'></i>".html_safe, edit_picture_path(picture), title: "Edit", class: "btn btn-success btn-sm rounded-0" %>
+            </li>
+            <li class="list-inline-item p-2">
+              <%= link_to "<i class='fa fa-trash'></i>".html_safe, "#", title: "Delete", class: "btn btn-danger btn-sm rounded-0" %>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
     <% end %>
-  </tbody>
-</table>
+  </div>
+</div>
 
-<br>
+<style media="screen">
+  /* Demo Margin */
 
-<%= link_to 'New Picture', new_picture_path %>
+
+  /* This may not be needed depending on if you want to restrict the card size*/
+  .card{
+    max-width: 380px;
+  }
+  .card-body {
+    max-height: 210px;
+    min-height: 210px;
+  }
+
+  .card-image-wrapper {
+    display: flex;
+    width: 100%;
+    height: 250px;
+    /* Just to show the size of the image wrapper */
+    background-color: darkgrey;
+  }
+
+  .card-img-top {
+    display: block;
+    width: auto;
+    max-height: 100%;
+    margin: auto;
+  }
+</style>

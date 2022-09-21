@@ -23,10 +23,29 @@
       <%= form.text_area :description, class: "form-control" %>
     </div>
 
-
     <div class="field mb-3">
       <%= form.label "Project For", class: "form-label" %>
       <%= form.select :project_type, Picture.project_types.keys.to_a,{selected: @type}, class: "form-control" %>
+    </div>
+
+    <div class="mb-3">
+      <% if picture&.main_image&.attachment&.url %>
+      <div class="row">
+        <div class="col-6">
+          <img src="<%=picture.main_image.attachment.url %>" alt="" class="img-thumbnail" style="width: 40%">
+        </div>
+        <div class="col-6">
+          <ul class="list-group">
+            <li class="list-group-item"><b>Size:</b>  <%=  picture.main_image&.blob.byte_size %> Byte </li>
+            <li class="list-group-item"> <b>File name: </b> <%= picture.main_image&.blob.filename %> </li>
+            <li class="list-group-item"> <b> Content type: </b> <%= picture.main_image&.blob.content_type %> </li>
+            <li class="list-group-item"><b> URL: </b> <a href=" <%= picture.main_image&.attachment.url %> "> <%= picture.main_image&.attachment.url %> </a> </li>
+
+          </ul>
+
+        </div>
+      </div>
+      <% end %>
     </div>
 
     <div class="field mb-3">

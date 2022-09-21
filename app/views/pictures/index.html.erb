@@ -1,7 +1,4 @@
 <br>
-
-
-
 <div class="container-fluid ">
   <br>
   <div class="text-center">
@@ -12,49 +9,21 @@
   </div>
 </div>
 
-<br><br>
-<hr>
-<div class="container">
-  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-    <% @pictures.each do |picture| %>
-    <div class="col">
-      <div class="card">
-        <div class="card-image-wrapper">
-          <img src="<%= picture.main_image.attachment && picture.main_image.attachment.url %>" class="card-img-top img-fluid" alt=" <%= picture.title %>">
-        </div>
-        <div class="card-body">
-          <%= generate_badge(picture.project_type) %>
-          <h5 class="card-title"> <%= picture&.title.humanize.truncate(50)  %></h5>
-          <p class="card-text"> <%= picture.description && picture.description.truncate(120) %></p>
-          <ul class="list-inline m-0 text-center" style="bottom: 1px; position: absolute" >
-            <li class="list-inline-item p-2">
-              <%= link_to "<i class='fa fa-eye'></i>".html_safe, picture_path(picture), title: "View", class: "btn btn-primary btn-sm rounded-0" %>
 
-            </li>
-            <li class="list-inline-item p-2">
-              <%= link_to "<i class='fa fa-edit'></i>".html_safe, edit_picture_path(picture), title: "Edit", class: "btn btn-success btn-sm rounded-0" %>
-            </li>
-            <li class="list-inline-item p-2">
-
-              <%= link_to "<i class='fa fa-trash'></i>".html_safe, picture_path(picture), method: :delete,   data: {:confirm => 'Are you sure?'}, class: "btn btn-danger btn-sm rounded-0" %>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <% end %>
-  </div>
+<div id="pictures-collection-container" class="">
+  <%= render 'pictures/partials/pictures'%>
 </div>
+
 
 <style media="screen">
   /* Demo Margin */
 
 
   /* This may not be needed depending on if you want to restrict the card size*/
-  .card{
+  .card-size-380{
     max-width: 380px;
   }
-  .card-body {
+  .card-body-height-210 {
     max-height: 210px;
     min-height: 210px;
   }

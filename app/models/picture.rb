@@ -22,6 +22,7 @@ class Picture < ApplicationRecord
 
   has_one_attached :main_image
 
-  scope :by_type, ->(type) { where(project_type: type) }
+  scope :filter_by_type, ->(type) { 
+    where(project_type: type) }
 
 end

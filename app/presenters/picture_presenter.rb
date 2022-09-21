@@ -28,5 +28,11 @@ class PicturePresenter
     @picture &.description.humanize
   end
 
+  def self.filter_active?(filter_type_param, filter_name)
+    return 'active' if filter_type_param == filter_name
+    return 'active' if filter_name == 'all'
+    ''
+  end
+
 
 end

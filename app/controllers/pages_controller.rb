@@ -17,6 +17,6 @@ class PagesController < ApplicationController
   def projects
     @type = params[:type]
     @type = @type.downcase if @type
-    @pictures = Picture.by_type(@type)
+    @pictures = Picture.filter_by_type(@type)
   end
 end

@@ -1,0 +1,76 @@
+
+<ul id="filters" class="clearfix">
+  <li>
+    <span class="filter <%= @type.nil? ? 'active' : '' %>" data-filter=".print, .strategy, .logo, .web">
+      <%=link_to "All", pictures_path, remote: true %>
+    </span>
+  </li>
+  <li>
+    <span class="filter <%= PicturePresenter.filter_active?(@type, 'kitchens' )%> " data-filter=".kitchens">
+      <%=link_to "Kitchens", pictures_path(type: "kitchens"), remote: true %>
+    </span>
+
+  </li>
+  <li>
+    <span class="filter <%= PicturePresenter.filter_active?(@type, 'bathrooms' )%>" data-filter=".bathrooms">
+      <%=link_to "Bathrooms", pictures_path(type: "bathrooms"), remote: true %>
+    </span>
+  </li>
+
+  <li>
+    <span class="filter <%= PicturePresenter.filter_active?(@type, 'basements' )%>" data-filter=".basements">
+      <%=link_to "Basements", pictures_path(type: "basements"), remote: true %>
+    </span>
+  </li>
+
+  <li>
+    <span class="filter <%= PicturePresenter.filter_active?(@type, 'interiors' )%>" data-filter=".interiors">
+      <%=link_to "Interiors", pictures_path(type: "interiors"), remote: true %>
+    </span>
+  </li>
+
+  <li>
+    <span class="filter" data-filter=".exteriors">
+      <%=link_to "Exteriors", pictures_path(type: "exteriors"), remote: true %>
+    </span>
+  </li>
+
+</ul>
+
+
+<style media="screen">
+  #filters {
+    margin: 1%;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+  }
+
+  #filters li {
+    float: left;
+  }
+
+  #filters li span {
+    display: block;
+    padding: 5px 20px;
+    text-decoration: none;
+    color: #666;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all ease-in-out 0.25s;
+  }
+
+  #filters li:hover span {
+    color: #000;
+  }
+
+  #filters li span.active {
+    background: #1fbae7;
+    color:#fff;
+  }
+
+  a{
+    text-decoration: none;
+    color: inherit;
+  }
+</style>

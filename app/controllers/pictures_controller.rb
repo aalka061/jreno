@@ -3,7 +3,19 @@ class PicturesController < ApplicationController
 
   # GET /pictures or /pictures.json
   def index
-    @pictures = Picture.all
+    @pictures = Picture.where(nil)
+    filtering_params.each do |k,v|
+      @pictures = @pictures.public_send("filter_by_#{k}", v)
+    end
+    @type= filtering_params[:type]
+    puts "********"
+    puts @type
+
+    respond_to do |format|
+      format.js
+      format.html
+    end
+
   end
 
   # GET /pictures/1 or /pictures/1.json
@@ -62,13 +74,17 @@ class PicturesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_picture
-      @picture = Picture.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_picture
+    @picture = Picture.find(params[:id])
+  end
 
-    # Only allow a list of trusted parameters through.
-    def picture_params
-      params.require(:picture).permit(:title, :description, :url, :project_type, :main_image)
-    end
+  # Only allow a list of trusted parameters through.
+  def picture_params
+    params.require(:picture).permit(:title, :description, :url, :project_type, :main_image)
+  end
+
+  def filtering_params
+    params.slice(:type)
+  end
 end

@@ -2,13 +2,13 @@
   <h1 style="font-size: 65px" class="p-bold">Our Services</h1>
   <p>Let us help you make your dreams a reality.</p>
 </div>
+<br><br>
 
 <div class="row">
   <div class="col-lg-4 col-md-6">
-    <a href="#">
+    <a href=" <%=  pages_construction_path %>">
       <div class="service-item d-flex flex-column align-items-center text-center">
         <img class="mb-3 img-fluid" src="<%= asset_path('service_construction.jpeg')%>" alt="" style="width: 90%" /> <br>
-
         <div class="px-4 pb-4">
           <h4 class="text-uppercase mb-3 p-poppins" style="font-weight: bold">
             CONSTRUCTION
@@ -20,7 +20,7 @@
 
 
   <div class="col-lg-4 col-md-6">
-    <a href="#">
+    <a href="<%= pages_renovation_path %>">
       <div class="service-item d-flex flex-column align-items-center text-center">
         <img class="mb-3 img-fluid" src="<%= asset_path('service_renovation.jpeg')%>" alt="" style="width: 90%" /> <br>
         <div class="px-4 pb-4">
@@ -33,11 +33,9 @@
   </div>
 
   <div class="col-lg-4 col-md-6">
-    <a href="#">
+    <a href=" <%= pages_maintenance_path  %>">
       <div class="service-item d-flex flex-column align-items-center text-center">
-
         <img class="mb-3 img-fluid image_comp" src="<%= asset_path('service_maintenance.jpeg')%>" alt="" style="width: 90%" />
-
         <div class="px-4 pb-4">
           <h4 class="text-uppercase mb-3 p-poppins" style="font-weight: bold">
             MAINTENANCE

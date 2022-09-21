@@ -1,0 +1,13 @@
+<div class="container-fluid py-6 px-5">
+  <br>
+  <div class="mt-3">
+    <%= link_to 'New Picure', new_picture_path(type: "interiors"), class: "btn btn-secondary float-md-end" %>
+  </div>
+</div>
+<div class="row text-center" style="padding-top: 100px;">
+  <h1 style="font-size: 65px" class="p-bold">Interiors</h1>
+  <p>Design – Build Remodeling & Custom Interior Furnishings With All The Fun And None Of The Headaches. Not A Single Detail Missed.</p>
+</div>
+
+
+<%= render 'pages/partials/pics', pictures: @pictures %>

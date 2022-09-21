@@ -1,24 +1,29 @@
-<p id="notice"><%= notice %></p>
+<% picture_presenter =  PicturePresenter.new(@picture)%>
+<br><br>
+<div class="container">
+  <div class="card card-body">
+    <div class="row">
+      <div class="col-6">
+        <img src="<%= picture_presenter.image_url%>" class="card-img-top" alt="...">
+      </div>
+      <div class="col-6">
+        <h3>Title</h3>
+        <p class="card-title"> <%= picture_presenter.humanized_title %> </p>
+        <h3>Description</h3>
+        <p class="card-text"><%= picture_presenter.humanized_description %> </p>
+        <h3>Project</h3>
+        <p class="card-text"> <%= @picture.project_type.humanize %> </p>
+        <h3>Image URL</h3>
+        <p class="card-text"><a href="<%= picture_presenter.image_url %>"> <%= picture_presenter.image_url %> </a> </p>
+        <h3>Size (KB)</h3>
+        <p class="card-text"> <%= picture_presenter.image_kbyte_size %> </p>
+      </div>
+    </div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @picture.title %>
-</p>
+  </div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @picture.description %>
-</p>
 
-<p>
-  <strong>Url:</strong>
-  <%= @picture.url %>
-</p>
+  <%= link_to 'Edit', edit_picture_path(@picture) %> |
+  <%= link_to 'Back', pictures_path %>
 
-<p>
-  <strong>Project type:</strong>
-  <%= @picture.project_type %>
-</p>
-
-<%= link_to 'Edit', edit_picture_path(@picture) %> |
-<%= link_to 'Back', pictures_path %>
+</div>

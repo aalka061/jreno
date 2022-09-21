@@ -1,9 +1,19 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Pictures</h1>
+<br>
 
 
 
+<div class="container-fluid ">
+  <br>
+  <div class="text-center">
+    <h1 class="mb-3"><b>Gallary</b></h1>
+  </div>
+  <div class="mt">
+    <%= link_to '+ New Photo', new_picture_path(type: "kitchens"), class: "btn btn-secondary float-md-end" %>
+  </div>
+</div>
+
+<br><br>
+<hr>
 <div class="container">
   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
     <% @pictures.each do |picture| %>
@@ -14,17 +24,19 @@
         </div>
         <div class="card-body">
           <%= generate_badge(picture.project_type) %>
-          <h5 class="card-title"> <%= picture.title && picture.title.humanize  %></h5>
-          <p class="card-text"> <%= picture.description && picture.description.truncate(150) %></p>
-          <ul class="list-inline m-0 text-center" style ="bottom: 1px; position: absolute" >
+          <h5 class="card-title"> <%= picture&.title.humanize.truncate(50)  %></h5>
+          <p class="card-text"> <%= picture.description && picture.description.truncate(120) %></p>
+          <ul class="list-inline m-0 text-center" style="bottom: 1px; position: absolute" >
             <li class="list-inline-item p-2">
-              <button class="btn btn-primary btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="View"><i class="fa fa-eye"></i></button>
+              <%= link_to "<i class='fa fa-eye'></i>".html_safe, picture_path(picture), title: "View", class: "btn btn-primary btn-sm rounded-0" %>
+
             </li>
             <li class="list-inline-item p-2">
               <%= link_to "<i class='fa fa-edit'></i>".html_safe, edit_picture_path(picture), title: "Edit", class: "btn btn-success btn-sm rounded-0" %>
             </li>
             <li class="list-inline-item p-2">
-              <%= link_to "<i class='fa fa-trash'></i>".html_safe, "#", title: "Delete", class: "btn btn-danger btn-sm rounded-0" %>
+
+              <%= link_to "<i class='fa fa-trash'></i>".html_safe, picture_path(picture), method: :delete,   data: {:confirm => 'Are you sure?'}, class: "btn btn-danger btn-sm rounded-0" %>
             </li>
           </ul>
         </div>

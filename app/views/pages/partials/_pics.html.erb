@@ -1,0 +1,19 @@
+<div  id="lightgallery" class="row" style="padding-left: 70px; padding-right: 70px">
+  <% @pictures && @pictures.each do |picture| %>
+  <div class="col-lg-4 col-md-6"
+  data-src=" <%=picture.main_image.attachment && picture.main_image.attachment.url%>"
+  data-sub-html="<h4><%= picture.title  %> </h4><p><%= picture.description %>.</p>">
+  <a href="#">
+
+    <img src=" <%= picture.main_image.attachment && picture.main_image.attachment.url %>" class="img-thumbnail img-responsive" style="height: 500px; display: block;">
+  </a>
+</div>
+<% end %>
+</div>
+
+
+<script type="text/javascript">
+  lightGallery(document.getElementById('lightgallery'))
+
+
+</script>

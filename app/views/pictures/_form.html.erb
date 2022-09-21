@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="card card-body">
+    <%= form_with(model: picture) do |form| %>
+    <% if picture.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(picture.errors.count, "error") %> prohibited this picture from being saved:</h2>
+
+      <ul>
+        <% picture.errors.each do |error| %>
+        <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+    <% end %>
+
+    <div class="mb-3">
+      <%= form.label :title, class: "form-label" %>
+      <%= form.text_field :title, class: "form-control" %>
+    </div>
+
+    <div class="field mb-3">
+      <%= form.label :description, class: "form-label"%>
+      <%= form.text_area :description, class: "form-control" %>
+    </div>
+
+
+    <div class="field mb-3">
+      <%= form.label "Project For", class: "form-label" %>
+      <%= form.select :project_type, Picture.project_types.keys.to_a,{selected: @type}, class: "form-control" %>
+    </div>
+
+    <div class="field mb-3">
+      <%= form.label "File", class: "form-label" %>
+      <%= form.file_field :main_image, class: 'form-control', direct_upload: true %>
+    </div>
+
+    <div class="actions d-flex flex-row-reverse">
+      <%= form.submit 'Submit', class: "btn btn-primary" %>
+    </div>
+
+
+    <% end %>
+
+  </div>
+
+</div>

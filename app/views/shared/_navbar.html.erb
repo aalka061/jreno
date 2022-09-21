@@ -16,7 +16,7 @@
 
         <!-- <a href="#" class="nav-item nav-link">About</a> -->
         <a href=" <%= pages_services_path %>" class="nav-item nav-link <%= 'active' if current_page?(services_path) %>">Services</a>
-        <a href=" <%= works_path %>" class="nav-item nav-link <%= 'active' if current_page?(works_path) %>">Projects</a>
+        <a href=" <%= pages_projects_path %>" class="nav-item nav-link <%= 'active' if current_page?(works_path) %>">Projects</a>
         <% if controller.action_name == "homepage"%>
         <a href="#contact_form" class="nav-item nav-link ">Contact</a>
         <% else %>

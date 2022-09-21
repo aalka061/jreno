@@ -13,4 +13,10 @@ class PagesController < ApplicationController
   def construction
     @contact = Contact.new
   end
+
+  def projects
+    @type = params[:type]
+    @type = @type.downcase if @type
+    @pictures = Picture.by_type(@type)
+  end
 end

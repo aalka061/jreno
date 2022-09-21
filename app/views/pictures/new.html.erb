@@ -1,0 +1,8 @@
+<br><br>
+<div class="text-center">
+  <h2 class="mb-3">New Image in the <b class="text-primary"> <%= @type && @type.humanize %> </b> Section</h2>
+</div>
+
+<%= render 'form', picture: @picture %>
+
+<%= link_to 'Back', pictures_path %>

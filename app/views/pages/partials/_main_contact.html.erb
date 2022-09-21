@@ -1,0 +1,49 @@
+<div class="row">
+  <div class="col-lg-4 col-xs-12" >
+    <div class="p-poppins"; font-weight: 100;">
+      <h1 style="line-height: 1.4em; font-weight: bold" >Let's Discuss Your Next Project</h1>
+      <p class="mb-4 pt-4 pr-4 col-8">
+        Fill out the form, or call us to set up a free in-home consultation.
+      </p>
+      <span style="font-weight: bold;"> <h5> Service Areas </h5> </span>
+
+      <p class="mb-4 pr-4" style="line-height: 2.8;">
+        Montreal Island, South Shore <br><br>
+        966-1077 Rue Saint Mathieu, Montreal, QC, H3H 2S4
+        info@jreno.com <br>
+
+        438-488-4100
+      </p>
+    </div>
+  </div>
+  <div class="col-lg-3">
+
+  </div>
+
+  <div class="col col-xs-12" >
+    <%= form_for @contact, remote: true do |f| %>
+
+    <div class="row g-3 box">
+      <div class="inputBox col-12 col-sm-6">
+        <%= f.text_field  :name, required: true, class: "form-control", placeholder: "Your Name", style: "height: 55px;" %>
+      </div>
+
+      <div class="inputBox col-12 col-sm-6">
+        <%= f.text_field  :phone_number, class: "form-control", placeholder: "Mobile", style: "height: 55px;" %>
+      </div>
+
+      <div class="inputBox col-12 col-sm-12">
+        <%= f.text_field :email, required: true, class: "contact-form-text-area form-control", placeholder: "Email", style: "height: 55px;" %>
+      </div>
+      <div class="inputBox col-12">
+        <%= f.text_area :message, rows: 8, cols: 40, required: true, class: "form-control",
+        placeholder: "Please write briefly about your project and prefered date and time to be contacted", rows: 10%><br>
+      </div>
+      <div class="col-12">
+        <%= f.submit 'Send Message', class: 'btn btn-dark w-100'%>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
+<br><br><br><br>

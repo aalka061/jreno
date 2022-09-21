@@ -1,0 +1,18 @@
+development:
+  cloud_name: dgjpjv6i0
+  api_key: '564753984173283'
+  api_secret: p4W_n1TOgDwHF3RJ0S8fTTLkcPA
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: dgjpjv6i0
+  api_key: '564753984173283'
+  api_secret: p4W_n1TOgDwHF3RJ0S8fTTLkcPA
+  enhance_image_tag: true
+  static_file_support: true
+test:
+  cloud_name: dgjpjv6i0
+  api_key: '564753984173283'
+  api_secret: p4W_n1TOgDwHF3RJ0S8fTTLkcPA
+  enhance_image_tag: true
+  static_file_support: false

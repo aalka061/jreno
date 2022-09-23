@@ -1,0 +1,73 @@
+<div class="text-center" style="background-image: url(<%= asset_path('about_us_background_progress.jpeg')%>); background-repeat: no-repeat; height: 55vh; opacity: 0.90; background-size: cover; background-position-y: center">
+  <div style="padding-bottom: 5%">
+
+  </div>
+  <div class="container-fluid text-center" style="background-color: #BCDEE4; opacity: 0.86; padding-bottom: 1%">
+    <br><br>
+    <h1 class="fw-bold p-bold" style="margin-bottom: 1%">About us</h1>
+    <br>
+    <p style="padding-left: 27%; padding-right: 27%;">
+      JRÉNO is a leading and reputable construction company based in Montreal. We specialize in construction of new spaces and the renovation of existing ones. Ever since we have initiated the company, we’ve used  a comprehensive approach to manage the projects and making sure to provide our clients with a wide range of services to cover their needs. Using the best professionals on the market for completing the project with precision, punctuality and high quality service.
+      <br><br>
+      <span style="font-weight: bold"><i>Get in touch today to learn more about what we can offer you and to receive your free estimate. Make sure to put your project is in good hands</i></span>
+    </p>
+  </div>
+</div>
+
+
+
+<div class="row text-center">
+  <div class="">
+    <br><br><br>
+    <h2 class="p-bold">
+      Our Process
+    </h2> <br><br>
+    <p style="padding: 10px 30%">
+      We provide you with the planning and
+      scheduling maintenance before a problem occurs.
+      We keep records of  past inspections and the servicing
+    </p>
+  </div>
+</div>
+
+<br><br><br>
+
+<div style="background-image: url(<%= asset_path('about_us_background_progress.jpg') %>); %>; background-size: cover ">
+  <div class="card-group" >
+    <%= render 'pages/partials/aboutus_our_progress_card', image_url: 'about_us_1.jpeg' %>
+    <%= render 'pages/partials/aboutus_our_progress_card', card_title: 'Preconstruction Design', card_text: 'We have a unique background in preconstruction that most contractors don’t normally possess.', image_url: nil %>
+    <%= render 'pages/partials/aboutus_our_progress_card', image_url: 'about_us_2.jpeg' %>
+    <%= render 'pages/partials/aboutus_our_progress_card', card_title: 'Design & Construction Estimate', card_text: 'Real time cost estimates for your Project at every stage from Concept Design to Final Submission ', image_url: nil %>
+  </div>
+
+  <div class="card-group">
+    <%= render 'pages/partials/aboutus_our_progress_card', card_title: 'On-Site Consultations', card_text: 'Our consultants will come to you. We work hard to understand your requirements and deliver the best results ', image_url: nil %>
+    <%= render 'pages/partials/aboutus_our_progress_card', image_url: 'about_us_3.jpeg' %>
+    <%= render 'pages/partials/aboutus_our_progress_card', card_title: 'The Finishing Touches', card_text: 'Our unparalleled craftsmanship, expertise, and high level of commitment have made us the upcoming leading contractor in the industry', image_url: nil %>
+    <%= render 'pages/partials/aboutus_our_progress_card', image_url: 'about_us_4.jpeg' %>
+  </div>
+
+  <div class="row text-center" style="opacity:0.89; background-color:  #BCDEE4 ;">
+    <div class="">
+      <br><br><br>
+      <h2 class="p-bold">
+        Our Quality Guarantee
+      </h2> <br><br>
+      <p style="padding: 2% 20%; font-weight: 29px">
+        All new home, extension and renovation building work carried out  by Jreno is
+        covered by our quality guarantee.  <br>This gives you confidence your
+        building project is in the hands of a conscientious and professional Montreal construction company. <br> <br>
+
+        All of our building materials are quality guaranteed and
+        sourced from mainstream suppliers and/or retailers. Some materials, like structural steel, come with a warranty from the manufacturer of up to 25 years. <br> <br>
+
+        In addition, we place great importance on completing your project not only on budget, but within the agreed time frame of construction. <br> <br>
+
+        For a high quality guaranteed new home, home extension or home renovation Montreal based builder you can be confident when using Jreno for your next project.
+
+      </p>
+    </div>
+  </div>
+</div>
+
+<%= render 'pages/partials/get_estimate_footer' %>

@@ -1,8 +1,8 @@
 <div style="margin-left: 5%; margin-right: 5%;">
   <header>
     <div class=" container-fluid ">
-      <div class="carousel-cap justify-content-center col-6">
-        <h1 class="display-2" style="padding-top: 14%">
+      <div class="carousel-cap justify-content-center col-6 co-xs-12">
+        <h1 class="p-bold" style="padding-top: 14%">
           EXCEPTIONAL HOME CONSTRUCTION RENOVATION & MAINTENANCE
         </h1>
         <a class="btn btn-light py-md-3 px-md-5 pb-2" style="margin-top: 25%" href="#contact_form">Get a Free Estimate</a>
@@ -10,83 +10,83 @@
     </div>
   </header>
 
-<div style="margin-top: 60px">
-  <div class="row  align-items-center">
-    <div class="col-lg-6" >
-      <div class="about-img">
-        <img  class="img-fluid" src= "<%= asset_path('home_page_2.jpg') %>" alt="">
+  <div style="margin-top: 60px">
+    <div class="row  align-items-center">
+      <div class="col-lg-6" >
+        <div class="about-img">
+          <img  class="img-fluid" src= "<%= asset_path('home_page_2.jpg') %>" alt="">
+        </div>
+      </div>
+      <div class="col-lg-6" >
+        <div class="" style="margin-left: 15% ">
+          <!-- <h4 class="section-title">About Us</h4> -->
+          <h1 class="display-5 mb-4">
+            Looking forward to being the premium General Contractor in the Greater Montreal area
+          </h1>
+
+          <p>
+            Wether you are a person OR company we have the power to carry out your most ambitious projects. JRÉNO's Team take initial planning in charge, set timelines for your project, and handle cost management whilst ensuring compliance with construction regulations at all times.
+          </p>
+
+        </div>
+
       </div>
     </div>
-    <div class="col-lg-6" >
-      <div class="" style="margin-left: 15% ">
-        <!-- <h4 class="section-title">About Us</h4> -->
-        <h1 class="display-5 mb-4">
-          Looking forward to being the premium General Contractor in the Greater Montreal area
-        </h1>
+  </div>
 
+  <div style="margin-top: 80px; margin-bottom: 130px">
+    <div class="row ">
+      <h1 class="display-5 d-flex justify-content-center mb-4">Why Choose Us!</h1>
+    </div>
+    <div class="row text-center " style="padding-top: 80px">
+      <div class="col margin-why-choose" >
+        <h4 style="color: #a26028; font-weight: bold; margin-bottom: 20px" >Free, At Home Consultations</h4>
+        <p>  When you contact us, we’ll call you within 24 hours to schedule your appointment</p>
+      </div>
+
+      <div class="col margin-why-choose" >
+        <h4 style="color: #a26028; font-weight: bold; margin-bottom: 20px" >Affordable <br> Cost</h4>
+        <p> We provide quality work for your hard earned cash</p>
+      </div>
+
+      <div class="col margin-why-choose">
+        <h4 style="color: #a26028; font-weight: bold; margin-bottom: 20px" >
+          Post-delivery service
+        </h4>
         <p>
-          Wether you are a person OR company we have the power to carry out your most ambitious projects. JRÉNO's Team take initial planning in charge, set timelines for your project, and handle cost management whilst ensuring compliance with construction regulations at all times.
+          Reliable, on-time construction material delivery
+
         </p>
-
       </div>
-
+      <div class="col margin-why-choose">
+        <h4 style="color: #a26028; font-weight: bold; margin-bottom: 20px" >Licensed & Insured</h4>
+        <p>We provide best-fit insurance package.  From smaller-scale renos to full-build remodeling  </p>
+      </div>
     </div>
   </div>
-</div>
-
-<div style="margin-top: 80px; margin-bottom: 130px">
-  <div class="row ">
-    <h1 class="display-5 d-flex justify-content-center mb-4">Why Choose Us!</h1>
-  </div>
-  <div class="row text-center " style="padding-top: 80px">
-    <div class="col margin-why-choose" >
-      <h4 style="color: #a26028; font-weight: bold; margin-bottom: 20px" >Free, At Home Consultations</h4>
-      <p>  When you contact us, we’ll call you within 24 hours to schedule your appointment</p>
+  <div style="margin-top: 80px">
+    <div class="row pb-4 mb-3 ">
+      <h1 class="display-5 d-flex justify-content-center">Our Services Include</h1>
     </div>
-
-    <div class="col margin-why-choose" >
-      <h4 style="color: #a26028; font-weight: bold; margin-bottom: 20px" >Affordable <br> Cost</h4>
-      <p> We provide quality work for your hard earned cash</p>
-    </div>
-
-    <div class="col margin-why-choose">
-      <h4 style="color: #a26028; font-weight: bold; margin-bottom: 20px" >
-        Post-delivery service
-      </h4>
-      <p>
-        Reliable, on-time construction material delivery
-
-      </p>
-    </div>
-    <div class="col margin-why-choose">
-      <h4 style="color: #a26028; font-weight: bold; margin-bottom: 20px" >Licensed & Insured</h4>
-      <p>We provide best-fit insurance package.  From smaller-scale renos to full-build remodeling  </p>
+    <br><br>
+    <div class="row text-center ">
+      <%= render "services/partials/list_services" %>
     </div>
   </div>
-</div>
-<div style="margin-top: 80px">
-  <div class="row pb-4 mb-3 ">
-    <h1 class="display-5 d-flex justify-content-center">Our Services Include</h1>
+
+
+
+  <!-- Services End -->
+  <br><br><br><br><br>
+  <!-- Testimonial End -->
+  <div class="container-fluid mt-5 mb-5">
+    <%= render "pages/home_page/testimonial" %>
   </div>
+
   <br><br>
-  <div class="row text-center ">
-    <%= render "services/partials/list_services" %>
-  </div>
-</div>
-
-
-
-<!-- Services End -->
-<br><br><br><br><br>
-<!-- Testimonial End -->
-<div class="container-fluid mt-5 mb-5">
-  <%= render "pages/home_page/testimonial" %>
-</div>
-
-<br><br>
 </div>
 <div class="c-black" id="contact_form">
-    <%= render "pages/partials/contact_black" %>
+  <%= render "pages/partials/contact_black" %>
 </div>
 
 
@@ -95,10 +95,29 @@
     font-family: 'Poppins', sans-serif;
 
   }
-  h1{
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
+  h1 {
+    font-size: 80px;
   }
+
+  @media all and (max-device-width: 720px){
+    h1 {
+      font-size: 18px;
+    }
+  }
+
+  @media all and (max-device-width: 640px){
+    h1 {
+      font-size: 35px;
+    }
+  }
+
+  @media all and (max-device-width: 320px){
+    h1 {
+      font-size: 16px;
+    }
+  }
+
+
   .c-black{
     background-color: #1b1c1b !important;
   }
@@ -259,44 +278,5 @@
     margin-left: 100px;
     margin-right:100px;
   }
-  img  {
-    background-image: url("https://www.w3schools.com/cssref/img_tree.gif");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-  }
+
 </style>
-
-<script type="text/javascript">
-  (function ($) {
-    "use strict";
-
-
-    // Header carousel
-    $(".header-carousel").owlCarousel({
-      autoplay: true,
-      smartSpeed: 1500,
-      loop: true,
-      nav: false,
-      dots: true,
-      items: 1,
-      dotsData: true,
-    });
-
-
-    // Testimonials carousel
-    $('.testimonial-carousel').owlCarousel({
-      autoplay: true,
-      smartSpeed: 1000,
-      loop: true,
-      nav: false,
-      dots: true,
-      items: 1,
-      dotsData: true,
-    });
-
-
-  })(jQuery);
-
-
-
-</script>

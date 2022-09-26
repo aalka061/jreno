@@ -1,16 +1,18 @@
 <div class="bg-footer text-body pd-extra">
   <div class="row">
+    <div class="col-1">
 
-    <div class="col col-xs-12" >
-      <div class="p-poppins" style="padding-left: 180px; padding-right: 220px; font-weight: 100; color: white;">
-        <h1 style="color: white; line-height: 1.4em; font-weight: bold" >Let's Discuss Your Next Project</h1>
+    </div>
+    <div class="col-lg-3 col-xs-12" >
+      <div class="p-poppins" style="font-weight: 100; color: white;">
+        <h2 style="color: white; line-height: 1.7em; font-weight: bold" >Let's Discuss Your Next Project</h2>
         <p class="mb-4 pt-4 pr-4 col-8">
-          Fill out the form, or call us to set up a free in-home consultation.
+          Fill out the form, or  call us to <br>set up a free in-home consultation.
         </p>
         <span style="color: white">Service Areas </span><br>
 
         <p class="mb-4 pr-4" style="line-height: 2.8;">
-          Montreal Island, South Shore, North Sh
+          Montreal Island, South Shore, North Sh <br>
           966-1077 Rue Saint Mathieu, Montreal, QC, H3H 2S4
           info@jreno.com <br>
 
@@ -18,8 +20,11 @@
         </p>
       </div>
     </div>
+    <div class="col-2">
 
-    <div class="col col-xs-12" style= "padding-right: 200px">
+    </div>
+
+    <div class="col-lg-5 col-xs-12" >
       <%= form_for @contact, remote: true do |f| %>
 
       <div class="row g-3 box">
@@ -43,6 +48,10 @@
         </div>
       </div>
       <% end %>
+    </div>
+
+    <div class="col-1">
+
     </div>
   </div>
 </div>

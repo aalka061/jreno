@@ -16,11 +16,11 @@
         <a href="<%= pages_dashboard_path %>" class="nav-item nav-link btn btn-success" style="border-radius: 40px;">Dashboard</a>
         <% end %>
         <a href="<%= root_path %>" class="nav-item nav-link  <%= 'active' if current_page?(root_path) %> ">Home</a>
-        <a href="<%= pages_about_path %>" class="nav-item nav-link ">About</a>
+        <a href="<%= pages_about_path %>" class="nav-item nav-link <%= 'active' if current_page?(pages_about_path) %> ">About</a>
 
         <!-- <a href="#" class="nav-item nav-link">About</a> -->
-        <a href=" <%= pages_services_path %>" class="nav-item nav-link <%= 'active' if current_page?(services_path) %>">Services</a>
-        <a href=" <%= pages_projects_path %>" class="nav-item nav-link <%= 'active' if current_page?(works_path) %>">Projects</a>
+        <a href=" <%= pages_services_path %>" class="nav-item nav-link <%= 'active' if current_page?(pages_services_path) %>">Services</a>
+        <a href=" <%= pages_projects_path %>" class="nav-item nav-link <%= 'active' if current_page?(pages_projects_path) %>">Projects</a>
         <% if controller.action_name == "homepage"%>
         <a href="#contact_form" class="nav-item nav-link ">Contact</a>
         <% else %>
@@ -32,7 +32,7 @@
         <% if current_user %>
         <%= link_to "logout",  destroy_user_session_path, method: :delete, class: "nav-item nav-link #{'active' if current_page?(destroy_user_session_path) }" %>
         <% else %>
-        <%= link_to "<i class='fa fa-user text-primary'></i> login".html_safe,  new_user_session_path, class: "nav-item nav-link #{'active' if current_page?(new_user_session_path) }" %>
+        <%= link_to "<i class='fa fa-user text-primary'></i> Login".html_safe,  new_user_session_path, class: "nav-item nav-link #{'active' if current_page?(new_user_session_path) }" %>
         <% end %>
       </div>
 
@@ -42,12 +42,6 @@
 
 </div>
 <style media="screen">
-
-
-
-  .nav-link{
-    text-transform: uppercase
-  }
 
 
 

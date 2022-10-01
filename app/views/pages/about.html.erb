@@ -1,27 +1,29 @@
-<div class="text-center" style="background-image: url(<%= asset_path('about_us_background_progress.jpeg')%>); background-repeat: no-repeat; height: 55vh; opacity: 0.90; background-size: cover; background-position-y: center">
-  <div style="padding-bottom: 5%">
 
-  </div>
-  <div class="container-fluid text-center" style="background-color: #BCDEE4; opacity: 0.86; padding-bottom: 1%">
-    <br><br>
-    <h1 class="fw-bold p-bold" style="margin-bottom: 1%">About us</h1>
-    <br>
-    <p style="padding-left: 27%; padding-right: 27%;">
-      JRÉNO is a leading and reputable construction company based in Montreal. We specialize in construction of new spaces and the renovation of existing ones. Ever since we have initiated the company, we’ve used  a comprehensive approach to manage the projects and making sure to provide our clients with a wide range of services to cover their needs. Using the best professionals on the market for completing the project with precision, punctuality and high quality service.
-      <br><br>
+<div class="text-center" style="background-image: url(<%= asset_path('about_us_background_progress-modified.jpeg')%>); background-repeat: no-repeat; height: 70%; opacity: 0.90; background-size: cover; background-position-y: center">
+  <div class="container"  style="background-color: rgba(219, 219, 219, 0.88);  ">
+    <div  class="p-5 text-center container-fluid" >
+      <h1 class="fw-bold p-bold" style="margin-bottom: 1%">About us</h1>
+      <p class="p-poppins-200 mt-4" style="font-size: 17px;" >
+        JRÉNO is a leading and reputable construction company based in Montreal.
+        We specialize in construction of new spaces and the renovation of existing ones.
+        Ever since we have initiated the company,
+        we’ve used  a comprehensive approach to manage the
+        projects and making sure to provide our clients with a wide range of s
+        ervices to cover their needs.
+      </p>
       <span style="font-weight: bold"><i>Get in touch today to learn more about what we can offer you and to receive your free estimate. Make sure to put your project is in good hands</i></span>
-    </p>
+
+    </div>
+
   </div>
 </div>
-
-
 
 <div class="row text-center">
   <div class="">
     <br><br><br>
     <h2 class="p-bold">
       Our Process
-    </h2> <br><br>
+    </h2> <br>
     <p style="padding: 10px 30%">
       We provide you with the planning and
       scheduling maintenance before a problem occurs.
@@ -30,9 +32,9 @@
   </div>
 </div>
 
-<br><br><br>
+<br><br><br> <br>
 
-<div style="background-image: url(<%= asset_path('about_us_background_progress.jpg') %>); %>; background-size: cover ">
+<div style="background-image: url(<%= asset_path('about_us_background_progress-modified.jpeg') %>); %>; background-size: cover ">
   <div class="card-group" >
     <%= render 'pages/partials/aboutus_our_progress_card', image_url: 'about_us_1.jpeg' %>
     <%= render 'pages/partials/aboutus_our_progress_card', card_title: 'Preconstruction Design', card_text: 'We have a unique background in preconstruction that most contractors don’t normally possess.', image_url: nil %>
@@ -47,7 +49,7 @@
     <%= render 'pages/partials/aboutus_our_progress_card', image_url: 'about_us_4.jpeg' %>
   </div>
 
-  <div class="row text-center" style="opacity:0.89; background-color:  #BCDEE4 ;">
+  <div class="row text-center" style="opacity:1; background-color:  rgba(245,245,245, 0.85);">
     <div class="">
       <br><br><br>
       <h2 class="p-bold">
@@ -71,3 +73,12 @@
 </div>
 
 <%= render 'pages/partials/get_estimate_footer' %>
+
+
+<style media="screen">
+  @media (min-width: 1100px) {
+    .container{
+      max-width: 60%;
+    }
+  }
+</style>

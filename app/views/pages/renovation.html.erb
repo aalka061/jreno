@@ -1,129 +1,70 @@
 
-<div class="row">
-  <div class="p-5 bg-light rounded-3" style="background-image: url(<%= asset_path('renovation_main.jpeg')%>); background-repeat: no-repeat; height: 60vh; opacity: 0.95; z-index: -9">
-    <div class="container  my-3" style="background-color: rgba(245, 245, 245, 0.75); padding-bottom: 10%">
-      <div class="p-5" style="padding-top: 7%;">
-        <h1 class="p-bold" style="font-size: 60px">Renovation</h1><br><br>
-        <p class=" p-poppins-200" >
-          Depending on the desired features, your new interior space must have an inviting atmosphere and perfectly fit your lifestyle.
-          The JRENO team supports you throughout the planning of the space, the colours and the choice of materials to create a space that perfectly meets your needs and tastes.
-        </p>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-<br><br><br>
-
-<div class="row">
-  <div class="d-flex justify-content-center" >
-    <div class="p-2  col-xs-12">
-      <img src="<%= asset_path('renovation_basement.jpeg') %>" alt="">
-    </div>
-    <div class="p-4"></div>
-    <div class="col-lg-3 col-xs-12">
-      <h2 class="p-bold">
-        01 <br> Basement Renovation
-      </h2> <br>
-      <p>
-        Whether your basement renovation goal is a work-from-home office or a spare bedroom,
-        realizing your vision will take time, money, and expertise.
-        It’s tempting to take the DIY route for your basement renovation.
-        But in the end, enlisting professional help decreases headaches and increases the quality of your finished product.
+<div class="bg-light rounded-3" style="background-image: url(<%= asset_path('renovation_main.jpeg')%>); background-repeat: no-repeat; height: 60vh; opacity: 0.95; z-index: -9">
+  <div class="container" style="background-color: rgba(245, 245, 245, 0.75); height: 90% ; display: flex; align-items: center">
+    <div class="p-5 text-center">
+      <h1 class="p-poppins" style="font-weight: bold " >Renovation</h1>
+      <p class="p-poppins-200 mt-4" style="font-size: 17px" >
+        Depending on the desired features, your new interior space must have an inviting atmosphere and perfectly fit your lifestyle.
+        The JRENO team supports you throughout the planning of the space, the colors and the choice of materials to create a space that perfectly meets your needs and tastes.
       </p>
     </div>
-  </div>
-  <div class="line-between"></div>
 
+  </div>
 </div>
 
 <br><br><br>
-<div class="row">
-  <div class="d-flex justify-content-center">
 
-    <div class="col-3">
-      <h2 class="p-bold">
-        02 <br> Kitchen Renovation
-      </h2> <br>
-      <p>
-        Your kitchen is the heart of your home.
-        Whether you’re looking to improve the future resale value of your home or design a luxury kitchen
-        that’ll make meal preparation a dream, your investment in a residential kitchen renovation will yield substantial rewards.
-      </div>
-      <div class="p-4"></div>
+<%= render 'pages/partials/renovation_item',
+path: 'renovation_basement.jpeg',
+title: 'Basement Renovation',
+order_no: '01',
+description: ' Whether your basement renovation goal is a work-from-home office or a spare bedroom,
+realizing your vision will take time, money, and expertise.
+It’s tempting to take the DIY route for your basement renovation.
+But in the end, enlisting professional help decreases headaches and increases the quality of your finished product.'
+%>
 
-      <div class="p-2">
-        <img src="<%= asset_path('kitchen_renovation.jpeg') %>" alt="">
-      </div>
-    </div>
-    <div class="line-between"></div>
+<%= render 'pages/partials/renovation_item',
+path: 'kitchen_renovation.jpeg',
+title: 'Kitchen Renovation',
+order_no: '02',
+description: ' Your kitchen is the heart of your home.
+Whether you’re looking to improve the future resale value of your home or design a luxury kitchen
+that’ll make meal preparation a dream, your investment in a residential kitchen renovation will yield substantial rewards.'
+%>
 
+<%= render 'pages/partials/renovation_item',
+path: 'bathroomRenovation_renvation.jpeg',
+title: 'Bathroom renovation',
+order_no: '03',
+description: '  Whether you want to turn your small bathroom into a personal oasis or
+perform a bathroom restoration on an investment property, you should develop a watertight plan before you start your project.'
+%>
 
-  </div>
-
-  <br><br><br>
-  <div class="row" >
-    <div class="d-flex justify-content-center">
-      <div class="p-2">
-        <img src="<%= asset_path('otherRenovation_renovation.jpeg') %>" alt="">
-      </div>
-      <div class="p-4"></div>
-      <div class="col-3">
-        <h2 class="p-bold">
-          03 <br> Bathroom renovation
-        </h2> <br>
-        <p>
-          Whether you want to turn your small bathroom into a personal oasis or
-          perform a bathroom restoration on an investment property, you should develop a watertight plan before you start your project.
-        </p>
-      </div>
-    </div>
-    <div class="line-between"></div>
+<%= render 'pages/partials/renovation_item',
+path: 'otherRenovation_renovation.jpeg',
+title: 'Other Renovation',
+order_no: '04',
+description: '    Whether you’re looking to increase the property value of your home ahead
+of a sale or closing on a house you can’t wait to make your own, chances
+are there’s a renovation or remodeling project in your future'
+%>
 
 
-  </div>
+<style media="screen">
 
-  <br><br><br>
-
-  <div class="row">
-    <div class="d-flex justify-content-center">
-
-      <div class="col-3">
-        <h2>
-          04 <br> Other Renovation
-        </h2> <br>
-        <p>
-          Whether you’re looking to increase the property value of your home ahead
-          of a sale or closing on a house you can’t wait to make your own, chances
-          are there’s a renovation or remodeling project in your future
-
-        </div>
-        <div class="p-4"></div>
-
-        <div class="p-2">
-          <img src="<%= asset_path('renovation_basement.jpeg') %>" alt="">
-        </div>
-      </div>
-      <div class="line-between"></div>
+  @media (min-width: 1100px) {
+    .container{
+      max-width: 970px;
+    }
+  }
+  .line-between{
+    padding-bottom: 50px;
+    border-bottom: 5px solid #7a0000;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 70px;
+  }
 
 
-    </div>
-    <style media="screen">
-
-      @media (min-width: 1200px) {
-        .container{
-          max-width: 970px;
-        }
-      }
-
-
-      .line-between{
-        padding-bottom: 60px;
-        border-bottom: 5px solid #7a0000;
-        width: 50%;
-        margin: auto;"
-      }
-
-
-    </style>
+</style>

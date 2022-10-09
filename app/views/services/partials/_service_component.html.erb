@@ -2,7 +2,7 @@
   <div class="container">
     <a href="<%= _url  %>">
       <picture>
-        <img  class="img-mod" height="726px"  src="<%= asset_path(path) %>" alt="" />
+        <img  class="img-mod img-fluid" src="<%= asset_path(path) %>" alt="" />
       </picture>
       <h1 class="centered"> <%= title %></h1>
     </a>
@@ -22,11 +22,31 @@
     color: white;
     font-weight:bold;
     text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 5px;
-    font-size: 38px;
 
   }
 
   .img-mod {
     max-width: 100%;
+  }
+
+  @media screen and (max-width: 767px) {
+    .centered {
+      font-size: 1.2em;
+    }
+  }
+
+
+  /* md */
+  @media screen and (min-width: 992px) {
+    .centered {
+      font-size: 1.2em;
+    }
+  }
+
+  /* lg */
+  @media screen and (min-width: 1200px) {
+    .centered {
+      font-size: 36px;
+    }
   }
 </style>

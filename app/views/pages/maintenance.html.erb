@@ -1,11 +1,11 @@
-<div class="bg-light rounded-3" style="background-image: url(<%= asset_path('maintenance_main.jpg')%>); background-repeat: no-repeat; height: 60vh; opacity: 0.95; z-index: -9">
-  <div class="container" height: 90% ; display: flex; align-items: center">
-    <div class="p-5 text-center">
-      <h1 class="p-poppins" style="font-weight: bold " >Maintenance</h1>
+
+<div class="jumbotron jumbotron-fluid text-black text-center" >
+  <div class="col-sm-12 co-xs-12">
+    <div class="container " >
+      <h1  class="display-4" style="font-weight: bold " >Maintenance</h1>
       <a href="/pages/contactpage"> <button class="btn btn-danger btn-sm" type="button">I'am a member? sign in  </button> </a>
 
     </div>
-
   </div>
 </div>
 
@@ -44,11 +44,8 @@
   </div>
 </div>
 
-
-
-
 <div class="row text-center">
-  <div class="">
+  <div class="col-md-12">
     <br><br><br>
     <h2 class="p-bold">
       Go with <i style="color: #508f32"> PREVENTIVE </i> Maintenance!
@@ -59,33 +56,31 @@
       We keep records of  past inspections and the servicing
     </p>
   </div>
+<div class="row">
+  <h2 class="p-bold"> There are three level of preventive maintenance plans</h2>
+</div>
 
+<div class="d-flex justify-content-center">
+  <div class="card m-3 bg-light text-black" style="width: 18rem;">
+    <p class="p-bold">Basic</p>
+    <!-- <div class="card-body text-center">
+      <p class="card-text">Contact us for more deails</p>
+    </div> -->
+  </div>
+  <div class="card m-3 bg-info text-black" style="width: 18rem;">
+    <p class="p-bold">Standard</p>
+    <!-- <div class="card-body text-center">
+      <p class="card-text">Contact us for more deails</p>
+    </div> -->
+  </div>
+  <div class="card m-3 bg-primary text-white" style="width: 18rem;">
+    <p class="p-bold">Premium</p>
+    <!-- <div class="card-body text-center">
+      <p class="card-text">Contact us for more deails</p>
+    </div> -->
+  </div>
+</div>
 
-  <div class="row" style="padding-top: 120px">
-    <div class="col-12">
-      <h2 class="p-bold"> There are three level of preventive maintenance plans</h2>
-    </div>
-
-    <div class="d-flex justify-content-center bd-highlight mt-5">
-      <div class="p-5 bd-highligh " >
-        <h5> <b> Basic </b> </h5>
-        <p >
-          Contact us for more deails
-        </p>
-      </div>
-      <div class="p-5 bd-highlight" >
-        <h5> <b> Standard</b></h5>
-        <p >
-          Contact us for more deails
-        </div>
-        <div class="p-5 bd-highlight" >
-          <h5> <b> Premium</b></h5>
-          <p >
-            Contact us for more deails
-          </div>
-        </div>
-
-      </div>
 
       <div class="row" style="background-color: black; font-color: white; height: 320px">
         <div  class="text-center ">
@@ -99,4 +94,15 @@
       </div>
 
 
-    </div>
+</div>
+
+
+<style media="screen">
+  .jumbotron {
+    background-image: url(<%= asset_path('maintenance_main.jpeg')%>);
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+
+  }
+</style>

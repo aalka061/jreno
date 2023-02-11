@@ -1,33 +1,30 @@
-<div class="row">
-  <div class="col" style="padding-left: 160px; padding-right: 0px; padding-top: 100px">
-      <h1 class="p-bold" style="font-size: 60px;">Construction</h1>
-      <p class="p-poppins-200" style="font-weight: bold; font-size: 22px; margin-right: 70px">Join the Program and Rediscover <br>Your Confidence</p>
-      <br><br><br>
-      <div class="col-6">
-        <h4 style="font-weight: bold">General Contractor</h4>
-        <p class="p-poppins">
-           Hire a general contractor to take care of various aspects of the work and make sure the project is delivered on time.
-        </p>
-        <br><br><br>
-        <h4 style="font-weight: bold">Construction Management</h4>
-        <p class="p-poppins">Our Construction Management team will act on behalf of the Client for a set fee. The objective is to coordinate the different processes according to the Client’s pre-set schedule for timely project completion.</p>
-      </div>
-
-  </div>
-
-  <div class="col  col-xs- construction-contact-us-background">
-    <div class="image-container">
-      <img  src="<%= asset_path('WoodenHouse.jpg') %>" alt="" >
+<div class="container-fluid mt-5">
+  <div class="row">
+    <div class="col-1">
     </div>
-    <div class="centered ">
-    <div class="container" style="display: flex;">
-        <%= render "pages/partials/contact_white" %>
-      </div>
+    <div class="col-md-4 col-xs-12 pr-0 " >
+      <h1 class="p-bold" >Construction</h1>
+      <p class="p-poppins-200" style="font-weight: bold; font-size: 22px; margin-right: 70px">
+        Join the Program and Rediscover <br>Your Confidence
+      </p>
+      <p class="p-poppins">
+        Hire a general contractor to take care of various aspects of the work and make sure the project is delivered on time.
+      </p>
+      <h4 style="font-weight: bold">General Contractor</h4>
+      <p class="p-poppins">
+        Hire a general contractor to take care of various aspects of the work and make sure the project is delivered on time.
+      </p>
+      <h4 style="font-weight: bold; margin-top: 10%">Construction Management</h4>
+      <p class="p-poppins">Our Construction Management team will act on behalf of the Client for a set fee. The objective is to coordinate the different processes according to the Client’s pre-set schedule for timely project completion.</p>
+    </div>
+    <div class="col-1">
+
     </div>
 
-
+    <div class="col-md-4 col-xs-12 pr-0 d-flex justify-content-center">
+      <%= render "pages/partials/contact_white" %>
+    </div>
   </div>
-
 </div>
 
 <style media="screen">
@@ -40,12 +37,12 @@
     padding-bottom: 50px;
   }
 
-   .centered {
-      position: absolute;
-      top: 25%;
-      padding-left: 200px;
-      padding-right: 180px;
+  .centered {
+    position: absolute;
+    top: 25%;
+    padding-left: 200px;
+    padding-right: 180px;
 
 
-    }
+  }
 </style>

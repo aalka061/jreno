@@ -1,16 +1,17 @@
 # == Schema Information
 #
-# Table name: user_roles
+# Table name: clients
 #
 #  id         :bigint           not null, primary key
-#  user_id    :bigint           not null
-#  role_id    :bigint           not null
+#  type       :string
+#  person_id  :bigint           not null
+#  notes      :text
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 require "test_helper"
 
-class UserRoleTest < ActiveSupport::TestCase
+class TenantTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

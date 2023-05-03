@@ -1,0 +1,21 @@
+# == Schema Information
+#
+# Table name: people
+#
+#  id           :bigint           not null, primary key
+#  first_name   :string
+#  last_name    :string
+#  phone_number :string
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
+#
+
+one:
+  first_name: MyString
+  last_name: MyString
+  phone_number: MyString
+
+two:
+  first_name: MyString
+  last_name: MyString
+  phone_number: MyString

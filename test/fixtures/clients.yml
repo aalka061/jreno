@@ -1,0 +1,21 @@
+# == Schema Information
+#
+# Table name: clients
+#
+#  id         :bigint           not null, primary key
+#  type       :string
+#  person_id  :bigint           not null
+#  notes      :text
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+one:
+  type: 1
+  person: one
+  notes: MyText
+
+two:
+  type: 1
+  person: two
+  notes: MyText
